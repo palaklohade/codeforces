@@ -1,4 +1,4 @@
-body {
+/* body {
     margin: 0;
     min-height: 100vh;
     display: grid;
@@ -6,6 +6,13 @@ body {
     grid-auto-flow: column;
     gap: 30px;
     background: #460c0c;
+}
+ */
+ body {
+  background-image: url('https://previews.123rf.com/images/enterline/enterline1610/enterline161000926/64648258-the-word-explore-concept-and-theme-painted-in-watercolor-ink-on-a-white-paper.jpg');
+  background-size: cover; /* Adjust to cover the entire background */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
 }
 
 @property --a { 
@@ -93,6 +100,26 @@ img:hover {
   /* Add this CSS in your external stylesheet (styles.css) */
 
 /* Add this CSS in your external stylesheet (styles.css) */
+
+.highlight-box {
+  background-color: #dde0e0; /* Change to your desired background color */
+  padding: 10px; /* Add some padding for spacing */
+  border-radius: 50px; /* Add rounded corners to the box */
+  text-align: center; /* Center the text within the box */
+  font-family: 'Pacifico', cursive;
+  margin: 200px;
+  margin-top: 50px;
+  box-shadow: 0 0 0 5px rgb(34, 60, 67);
+}
+
+.highlight-box h1 {
+  margin: 0px; /* Remove default margin from the h1 */
+}
+
+.highlight-box p {
+  margin-top: 10px; /* Add some spacing below the h1 */
+}
+
 
 .image-container {
   display: inline-block;
