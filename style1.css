@@ -107,9 +107,20 @@ img:hover {
   border-radius: 50px; /* Add rounded corners to the box */
   text-align: center; /* Center the text within the box */
   font-family: 'Pacifico', cursive;
-  margin: 200px;
+  margin: 50px;
   margin-top: 50px;
   box-shadow: 0 0 0 5px rgb(34, 60, 67);
+}
+.city-name {
+  color: #00ff33; /* Change to your desired font color (red in this example) */
+  background-color: #ffeeaa;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: 20px auto;
+  /* margin-top: 500px; */
+  box-shadow: 0 0 0 5px red;
 }
 
 .highlight-box h1 {
@@ -126,7 +137,10 @@ img:hover {
   position: relative;
   width: 200px; /* Adjust dimensions as needed */
   height: 200px;
+  margin: 30px;
   overflow: hidden;
+  
+  
 }
 
 .frame {
@@ -134,6 +148,7 @@ img:hover {
   height: 100%;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out; /* Apply zoom and blur transition */
+  
 }
 
 .image-container:hover .frame {
