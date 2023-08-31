@@ -92,42 +92,34 @@ img:hover {
    
   /* Add this CSS in your external stylesheet (styles.css) */
 
+/* Add this CSS in your external stylesheet (styles.css) */
+
 .image-container {
-    display: inline-block;
-    position: relative;
-    width: 200px; /* Adjust dimensions as needed */
-    height: 200px;
-    overflow: hidden;
-  }
-  
-  .frame {
-    width: 100%;
-    height: 100%;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    transition: transform 1s linear; /* Apply rotation transition */
-  }
-  
-  .image-container:hover .frame {
-    transform: rotate(360deg);
-  }
-  
-  .frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .image-container:hover .frame img {
-    display: block; /* Display image after rotation */
-    animation: fadeIn 2s linear 2s forwards; /* Fade-in after 2 seconds */
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  overflow: hidden;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out; /* Apply zoom and blur transition */
+}
+
+.image-container:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+  filter: blur(4px); /* Apply blur effect on hover */
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame img:hover {
+  filter: none; /* Remove blur effect on image hover */
+}
