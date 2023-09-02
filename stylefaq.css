@@ -1,0 +1,92 @@
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 1250px;
+    /* margin-top: 100px; */
+  
+  }
+.highlight-box {
+    background-color: #dde0e0; /* Change to your desired background color */
+    padding: 10px; /* Add some padding for spacing */
+    border-radius: 50px; /* Add rounded corners to the box */
+    text-align: center; /* Center the text within the box */
+    font-family: 'Pacifico', cursive;
+    margin: 50px;
+    margin-top: 50px;
+    box-shadow: 0 0 0 5px rgb(34, 60, 67);
+  }
+.highlight-box h1 {
+    margin: 0px; /* Remove default margin from the h1 */
+}
+
+
+/* Create a header style */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Create a container for the content */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style headings */
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Style paragraphs */
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Add a little extra spacing to the last paragraph */
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Style the FAQ question */
+.faq-question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Style the FAQ answer */
+.faq-answer {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}

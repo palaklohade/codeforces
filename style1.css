@@ -1,0 +1,253 @@
+body {
+  background-image: url('https://previews.123rf.com/images/enterline/enterline1610/enterline161000926/64648258-the-word-explore-concept-and-theme-painted-in-watercolor-ink-on-a-white-paper.jpg');
+  background-size: cover; /* Adjust to cover the entire background */
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Keep the background fixed while scrolling */
+}
+
+@property --a { 
+    syntax: "<angle>";
+    initial-value: 0deg; 
+    inherits: true;
+}
+
+  @property --d { 
+    syntax: "<percentage>";
+    initial-value: 0%; 
+    inherits: true;
+}
+
+img {
+    --b: 10px; /* control the border thickness */
+    --g: 10px; /* control the gap */
+    
+    --d: 30%;
+    --a: 45deg;
+    --_o:50% + (var(--d) + var(--g) + var(--b));
+    --_i:50% + (var(--d) + var(--g));
+    --_f:50% + (var(--d));
+    clip-path: polygon(  
+    /*  */
+      calc(var(--_o)*sin(-45deg + var(--a))) calc(var(--_o)*cos(-45deg + var(--a))),
+      calc(var(--_o)*sin( 45deg + var(--a))) calc(var(--_o)*cos( 45deg + var(--a))),
+      calc(var(--_o)*sin(135deg + var(--a))) calc(var(--_o)*cos(135deg + var(--a))),
+      calc(var(--_o)*sin(225deg + var(--a))) calc(var(--_o)*cos(225deg + var(--a))),
+      calc(var(--_o)*sin(-45deg + var(--a))) calc(var(--_o)*cos(-45deg + var(--a))),
+      /*  */
+      calc(var(--_i)*sin(-45deg + var(--a))) calc(var(--_i)*cos(-45deg + var(--a))),
+      calc(var(--_i)*sin(225deg + var(--a))) calc(var(--_i)*cos(225deg + var(--a))),
+      calc(var(--_i)*sin(135deg + var(--a))) calc(var(--_i)*cos(135deg + var(--a))),
+      calc(var(--_i)*sin( 45deg + var(--a))) calc(var(--_i)*cos( 45deg + var(--a))),
+      calc(var(--_i)*sin(-45deg + var(--a))) calc(var(--_i)*cos(-45deg + var(--a))),
+      /*  */
+      calc(var(--_f)*sin(-45deg + var(--a))) calc(var(--_f)*cos(-45deg + var(--a))),
+      calc(var(--_f)*sin( 45deg + var(--a))) calc(var(--_f)*cos( 45deg + var(--a))),
+      calc(var(--_f)*sin(135deg + var(--a))) calc(var(--_f)*cos(135deg + var(--a))),
+      calc(var(--_f)*sin(225deg + var(--a))) calc(var(--_f)*cos(225deg + var(--a))),
+      calc(var(--_f)*sin(-45deg + var(--a))) calc(var(--_f)*cos(-45deg + var(--a)))
+);
+
+    outline: 20px solid #460c0c; /* color here */
+    outline-offset: 2px; /* a small value to avoid a viDsual glitch */
+    cursor: pointer;
+    transition: --d .3s,--a .2s .2s;
+}
+
+img:hover {
+    --a: 0deg;
+    --d: 71%;
+    transition: --a .3s,--d .2s .2s;
+}
+  
+  
+  
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+    /* position: relative; */
+   } 
+
+  .image {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s, cursor 0.9s;
+  }
+/* 
+@keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Apply the animation to the image when hovered */
+ 
+ /* .image-container:hover img {
+    animation: spin 2s linear forwards; /* Use 'forwards' to keep the final state after animation */
+  /* } */
+   
+  /* Add this CSS in your external stylesheet (styles.css) */
+
+/* Add this CSS in your external stylesheet (styles.css) */
+
+.highlight-box {
+  background-color: #dde0e0; /* Change to your desired background color */
+  padding: 10px; /* Add some padding for spacing */
+  border-radius: 50px; /* Add rounded corners to the box */
+  text-align: center; /* Center the text within the box */
+  font-family: 'Pacifico', cursive;
+  margin: 50px;
+  margin-top: 50px;
+  box-shadow: 0 0 0 5px rgb(34, 60, 67);
+}
+.city-name {
+  color: #00ff33; /* Change to your desired font color (red in this example) */
+  background-color: #ffeeaa;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  margin: 20px auto;
+  /* margin-top: 500px; */
+  box-shadow: 0 0 0 5px red;
+}
+
+.highlight-box h1 {
+  margin: 0px; /* Remove default margin from the h1 */
+}
+
+.highlight-box p {
+  margin-top: 10px; /* Add some spacing below the h1 */
+}
+
+
+.image-container {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  margin: 50px;
+ 
+  overflow: hidden;
+  
+  
+}
+.image-container1 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+ margin: 50px;
+ margin-left: 80px;
+ align-items: right;
+   overflow: hidden;
+  
+  
+}
+
+.image-container2 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  margin-left: 250px;
+  overflow: hidden;
+}
+
+.image-container3 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  margin-left: 350px;
+  overflow: hidden;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out; /* Apply zoom and blur transition */
+  
+}
+
+.image-container:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+
+.image-container2:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+.image-container3:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+.image-container1:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frame img:hover {
+  filter: none; /* Remove blur effect on image hover */
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 1250px;
+  /* margin-top: 100px; */
+
+}
+
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+#search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+
+.search-section {
+ 
+  padding:0px;
+  text-align: center;
+  margin-left: 1000px;
+}
