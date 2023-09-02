@@ -1,18 +1,8 @@
-/* body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    grid-auto-flow: column;
-    gap: 30px;
-    background: #460c0c;
-}
- */
- body {
+body {
   background-image: url('https://previews.123rf.com/images/enterline/enterline1610/enterline161000926/64648258-the-word-explore-concept-and-theme-painted-in-watercolor-ink-on-a-white-paper.jpg');
   background-size: cover; /* Adjust to cover the entire background */
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Keep the background fixed while scrolling */
+  background-attachment: scroll; /* Keep the background fixed while scrolling */
 }
 
 @property --a { 
@@ -36,8 +26,8 @@ img {
     --_o:50% + (var(--d) + var(--g) + var(--b));
     --_i:50% + (var(--d) + var(--g));
     --_f:50% + (var(--d));
-    clip-path: polygon(
-      /*  */
+    clip-path: polygon(  
+    /*  */
       calc(var(--_o)*sin(-45deg + var(--a))) calc(var(--_o)*cos(-45deg + var(--a))),
       calc(var(--_o)*sin( 45deg + var(--a))) calc(var(--_o)*cos( 45deg + var(--a))),
       calc(var(--_o)*sin(135deg + var(--a))) calc(var(--_o)*cos(135deg + var(--a))),
@@ -137,10 +127,41 @@ img:hover {
   position: relative;
   width: 200px; /* Adjust dimensions as needed */
   height: 200px;
-  margin: 30px;
+  margin: 50px;
+ 
   overflow: hidden;
   
   
+}
+.image-container1 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+ margin: 50px;
+ margin-left: 80px;
+ align-items: right;
+   overflow: hidden;
+  
+  
+}
+
+.image-container2 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  margin-left: 250px;
+  overflow: hidden;
+}
+
+.image-container3 {
+  display: inline-block;
+  position: relative;
+  width: 200px; /* Adjust dimensions as needed */
+  height: 200px;
+  margin-left: 350px;
+  overflow: hidden;
 }
 
 .frame {
@@ -153,7 +174,20 @@ img:hover {
 
 .image-container:hover .frame {
   transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
-  filter: blur(4px); /* Apply blur effect on hover */
+ ; /* Apply blur effect on hover */
+}
+
+.image-container2:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+.image-container3:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
+}
+.image-container1:hover .frame {
+  transform: scale(1.1) rotate(0deg); /* Zoom in by 10% on hover */
+ ; /* Apply blur effect on hover */
 }
 
 .frame img {
@@ -164,4 +198,56 @@ img:hover {
 
 .frame img:hover {
   filter: none; /* Remove blur effect on image hover */
+}
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  background-color: #f5f5f5;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: 1250px;
+  /* margin-top: 100px; */
+
+}
+
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+#search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+
+.search-section {
+ 
+  padding:0px;
+  text-align: center;
+  margin-left: 1000px;
 }
